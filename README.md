@@ -33,5 +33,5 @@ For more detailed guidance, please refer to the original [mmcls](https://github.
 
 Before finetuning on the following downstream tasks, download the ImageNet pre-trained [CedNet-50 weights](https://pan.baidu.com/s/1cV3PKT0eC-CYoojkC0ksSQ?pwd=v8k6) and set the `pretrained` argument to your local path.
 
-Currently, we provide an memory-efficient implementation of the involuton operator based on [CuPy](https://cupy.dev/). Please install this library in advance. A customized CUDA kernel would bring about further acceleration on the hardware. Any contribution from the community regarding this is welcomed!
+Currently, we provide an memory-efficient implementation of the C-voluton operator based on [CuPy](https://cupy.dev/). Please install this library in advance. A customized CUDA kernel would bring about further acceleration on the hardware. Any contribution from the community regarding this is welcomed!
 
