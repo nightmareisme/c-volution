@@ -22,7 +22,7 @@ cp det/mmdet/datasets/* mmdetection/mmdet/datasets
 # copy config files
 cp det/configs/_base_/models/* mmdetection/configs/_base_/models
 cp det/configs/_base_/schedules/* mmdetection/configs/_base_/schedules
-cp det/configs/involution mmdetection/configs -r
+cp det/configs/Cvolution mmdetection/configs -r
 
 # evaluate checkpoints
 cd mmdetection
