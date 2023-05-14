@@ -390,7 +390,7 @@ class RedNet(BaseBackbone):
                 conv_cfg=self.conv_cfg,
                 norm_cfg=self.norm_cfg,
                 inplace=True),
-            Cvolution(stem_channels // 2, 7, 1),
+            Cvolution(stem_channels // 2, 3, 1),
             nn.BatchNorm2d(stem_channels // 2),
             nn.ReLU(inplace=True),
             ConvModule(
