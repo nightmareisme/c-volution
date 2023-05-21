@@ -258,7 +258,7 @@ class ResLayer(nn.Sequential):
 
 
 @BACKBONES.register_module()
-class RedNet(BaseBackbone):
+class CedNet(BaseBackbone):
     """ResNet backbone.
 
     Please refer to the `paper <https://arxiv.org/abs/1512.03385>`_ for
@@ -338,7 +338,7 @@ class RedNet(BaseBackbone):
                  norm_eval=False,
                  with_cp=False,
                  zero_init_residual=True):
-        super(RedNet, self).__init__()
+        super(CedNet, self).__init__()
         if depth not in self.arch_settings:
             raise KeyError(f'invalid depth {depth} for resnet')
         self.depth = depth
@@ -439,7 +439,7 @@ class RedNet(BaseBackbone):
                 param.requires_grad = False
 
     def init_weights(self, pretrained=None):
-        super(RedNet, self).init_weights(pretrained)
+        super(CedNet, self).init_weights(pretrained)
         if pretrained is None:
             for m in self.modules():
                 if isinstance(m, nn.Conv2d):
@@ -467,7 +467,7 @@ class RedNet(BaseBackbone):
             return tuple(outs)
 
     def train(self, mode=True):
-        super(RedNet, self).train(mode)
+        super(CedNet, self).train(mode)
         self._freeze_stages()
         if mode and self.norm_eval:
             for m in self.modules():
