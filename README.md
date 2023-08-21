@@ -1,6 +1,11 @@
-# c-volution 
-a lightweight mixed-branch operator to enhance neural networks' channel aggregation capability and spatial dynamic convolution kernel generation efficiency.
+# C-volution: A Hybrid operator for Visual Recognition
+### Accepted by PRCV2023
 
+**The official repository with Pytorch**
+
+We are working on the final version paper, and the code will be available soon!
+
+## Abstract
 Convolution is a fundamental building block of modern neural networks, playing a critical role in the success of deep learning for vision tasks. However, convolutional neural networks exhibit limited spatial context due to their local receptive field, which also neglects global/long-term dependent relations. To this end, we propose a lightweight hybrid structure operator, called C-volution. The operator utilizes a multi-branch architecture to extract spatial and channel information from input data separately, enabling the network to capture abstract features while preserving important spatial information. In addition, summarize context information in a larger spatial range by generating dynamic kernels to strengthen the spatial contextual aggregation capability, overcoming the difficulty of long-term interactions in convolutions. This paper validates the efficacy of our operator through extensive experiments on ImageNet classification, COCO detection and segmentation, and the results have demonstrated the proposed C-volution when paired with ResNet50 achieves an outstanding boost in performance on visual tasks(+2.0\% top-1 accuracy, +3.1\% box mAP, and +2.0\% mask mAP) while having low parameters (i.e., CedNet50@16.3M Params). 
 
 ## Getting Started
